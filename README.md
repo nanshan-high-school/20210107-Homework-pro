@@ -64,5 +64,5 @@ Sample output 2:
 
 <h1>DP Hint:
 
-arr[j + coin[i]] = min(arr[j] + 1, arr[j + coin[i])</h1>
+arr[j + coin[i]] = min(arr[j] + 1, arr[j + coin[i]])</h1>
 
