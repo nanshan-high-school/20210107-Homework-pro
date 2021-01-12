@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,b;
+    cin >> n;
+    int a[n];
+    for(int i=0; i<n; i++){
+        cin >> a[i];
+    }
+
+    int len[10001]={1};
+    for(int i=0; i<10000; i++){
+        if(len[i]){
+            for(int j=0; j<n; j++){
+                if(!len[i+a[j]] || len[i+a[j]] > len[i]+1)
+                    len[i+a[j]] = len[i]+1;
+            }
+        }
+    }
+    cin >> b;
+    while(b){
+        if(b)
+            cout << len[b]-1 << "\n\n";
+        else
+            cout << -1;
+        cin >> b;
+    }
+}
